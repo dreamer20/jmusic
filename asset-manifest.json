@@ -1,0 +1,13 @@
+{
+  "main.css": "/jmusic/static/css/main.d7663b06.chunk.css",
+  "main.js": "/jmusic/static/js/main.a69bc88a.chunk.js",
+  "main.js.map": "/jmusic/static/js/main.a69bc88a.chunk.js.map",
+  "static/js/1.dfbdb937.chunk.js": "/jmusic/static/js/1.dfbdb937.chunk.js",
+  "static/js/1.dfbdb937.chunk.js.map": "/jmusic/static/js/1.dfbdb937.chunk.js.map",
+  "runtime~main.js": "/jmusic/static/js/runtime~main.37c6b18d.js",
+  "runtime~main.js.map": "/jmusic/static/js/runtime~main.37c6b18d.js.map",
+  "static/css/main.d7663b06.chunk.css.map": "/jmusic/static/css/main.d7663b06.chunk.css.map",
+  "index.html": "/jmusic/index.html",
+  "precache-manifest.5261bd684d03b2b00f3c45a368b9c9bf.js": "/jmusic/precache-manifest.5261bd684d03b2b00f3c45a368b9c9bf.js",
+  "service-worker.js": "/jmusic/service-worker.js"
+}
