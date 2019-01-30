@@ -1,0 +1,38 @@
+.progress-slider {
+  margin-top: 5px;
+  width: 100%;
+  height: 4px;
+  /*border: 1px solid black;*/
+  cursor: pointer;
+  transition: all .2s linear;
+  padding: 3px 0;
+}
+
+.progress-slider:hover .progress-slider_handler {
+  opacity: 1;
+}
+
+.progress-slider_line {
+  width: 100%;
+  height: 100%;
+  background: #bbb;
+  position: relative;
+}
+
+.progress-slider_filler {
+  background: #4fdede;
+  height: 100%;
+}
+
+.progress-slider_handler {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00c6c6;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%,-50%);
+  transition: opacity .2s linear;
+}

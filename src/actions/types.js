@@ -2,6 +2,10 @@
 export const RECEIVE_TRACKS = 'RECEIVE_TRACKS';
 export const REMOVE_TRACKS = 'REMOVE_TRACKS';
 
+export const UPDATE_RESULTS = 'UPDATE_RESULTS';
+
+export const ADD_TRACKS_TO_PLAYLIST = 'ADD_TRACKS_TO_PLAYLIST';
+
 export const SELECT_TRACK = 'SELECT_TRACK';
 export const SET_ON_PAUSE = 'SET_ON_PAUSE';
 export const SET_ON_PLAY = 'SET_ON_PLAY';

@@ -2,17 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { fetchTracksByName } from '../actions/';
+import { findTracksByName } from '../actions/';
 
-const searchStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  marginBottom: '20px'
-};
-
-const inputStyle = {
-  flex: '1'
-};
+import '../styles/Search.css';
 
 class Search extends Component {
   constructor(props) {
@@ -37,9 +29,9 @@ class Search extends Component {
   render() {
     const { value } = this.state;
     return (
-      <div style={searchStyle}>
-        <input style={inputStyle} onChange={this.handleChange} value={value} />
-        <button onClick={this.handleClick}>
+      <div className='search'>
+        <input className='search-input' onChange={this.handleChange} value={value} />
+        <button className='search-btn' onClick={this.handleClick}>
           Search
         </button>
       </div>
@@ -49,7 +41,7 @@ class Search extends Component {
 
 const mapStateToDispatch = dispatch => ({
   searchFor(value) {
-    dispatch(fetchTracksByName(value))
+    dispatch(findTracksByName(value))
   }
 });
 

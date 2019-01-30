@@ -24,7 +24,7 @@ class Tracklist extends Component {
 
 
 const mapStateToProps = state => ({
-  tracks: state.tracks.allIDs,
+  tracks: state.search.results,
 });
 
 const mapDispatchToProps = dispatch => ({

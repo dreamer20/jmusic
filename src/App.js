@@ -11,14 +11,15 @@ const AppStyle = {
 };
 
 const titleStyle = {
-  textAlign: 'center'
+  textAlign: 'center',
+  color: '#90bfb3'
 };
 
 class App extends Component {
   render() {
     return (
       <div style={AppStyle}>
-        <div>
+        <div style={{ width: '250px' }}>
           <h2 style={titleStyle}>
             Find Your Music!
           </h2>
