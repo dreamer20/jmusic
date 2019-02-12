@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Tracklist from './components/Tracklist';
 import Player from './components/Player';
+import FullPlayer from './components/FullPlayer';
 import Search from './components/Search';
+import Audio from './components/Audio';
 
 const AppStyle = {
   display: 'flex',
   justifyContent: 'center',
-  marginTop: '30px',
+  marginBottom: '48px'
 };
 
 const titleStyle = {
@@ -18,16 +20,20 @@ const titleStyle = {
 class App extends Component {
   render() {
     return (
-      <div style={AppStyle}>
-        <div style={{ width: '250px' }}>
-          <h2 style={titleStyle}>
-            Find Your Music!
-          </h2>
-          <Search />
-          <Tracklist />
-          <Player />
+      <Fragment>
+        <div style={AppStyle}>
+          <div style={{ width: '320px' }}>
+            <h2 style={titleStyle}>
+              Find Your Music!
+            </h2>
+            <Search />
+            <Tracklist />
+          </div>
         </div>
-      </div>
+          <Player />
+        <FullPlayer />
+        <Audio />
+      </Fragment>
     );
   }
 };

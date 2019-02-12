@@ -18,7 +18,47 @@ const paused = (state = true, action) => {
   return state;
 };
 
+const currentTime = (state = 0, action) => {
+  if (action.type === types.SET_CURRENT_TIME) {
+    return action.time;
+  }
+
+  return state;
+};
+
+const volume = (state = 1, action) => {
+  if (action.type === types.SET_VOLUME) {
+    return action.volume;
+  }
+
+  return state;
+};
+
+const timeSliderCaptured = (state = false, action) => {
+  if (action.type === types.CAPTURE_TIME_SLIDER) {
+    return true;
+  } else if (action.type === types.RELEASE_TIME_SLIDER) {
+    return false;
+  }
+
+  return state;
+};
+
+const fullPlayerOpen = (state = false, action) => {
+  if (action.type === types.OPEN_FULL_PLAYER) {
+    return true;
+  } else if (action.type === types.CLOSE_FULL_PLAYER) {
+    return false;
+  }
+
+  return state;
+};
+
 export default combineReducers({
   track,
-  paused
+  paused,
+  currentTime,
+  volume,
+  timeSliderCaptured,
+  fullPlayerOpen
 });

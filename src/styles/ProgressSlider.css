@@ -1,11 +1,8 @@
 .progress-slider {
-  margin-top: 5px;
   width: 100%;
-  height: 4px;
-  /*border: 1px solid black;*/
+  height: 10px;
   cursor: pointer;
   transition: all .2s linear;
-  padding: 3px 0;
 }
 
 .progress-slider:hover .progress-slider_handler {
@@ -20,13 +17,11 @@
 }
 
 .progress-slider_filler {
-  background: #4fdede;
+  background: #3dccfb;
   height: 100%;
 }
 
 .progress-slider_handler {
-  width: 8px;
-  height: 8px;
   border-radius: 50%;
   background: #00c6c6;
   opacity: 0;

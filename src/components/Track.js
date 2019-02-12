@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 
 import { selectTrack, stopTrack, playTrack } from '../actions/';
 
+import TrackImage from './TrackImage';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay,
+         faPause } from '@fortawesome/free-solid-svg-icons';
+
 import '../styles/Track.css';
 
 class Track extends Component {
@@ -33,14 +39,23 @@ class Track extends Component {
     if (!track) return null;
     
     return (
-      <div className={`track ${selected === id ? 'active' : ''}`}>  
-        <div className='track-title' title={track.name}>{track.name}</div>
+      <div className={`track ${selected === id ? 'active' : ''}`}>
+        <div className='track-image-wrapper'>
+          <img className='track-image' src={track.album_image} />
+        </div>
+        <div className='track-title' title={track.name}>
+          <div title={track.name} className='track-name'>
+            {track.name}
+          </div>
+          <div title={track.artist_name} className='track-artist-name'>
+            {track.artist_name}
+          </div>
+          </div>
         <div className='track-play-btn-wrapper'>       
           <button
-            className='track-play-btn'
+            className={`track-play-btn ${selected === id ? 'active' : ''}`}
             onClick={this.handleClick}>
-            <div className={`track-${paused ? 'play' : 'pause'}-icon`}>
-            </div>
+            <FontAwesomeIcon icon={paused ? faPlay : faPause}/>
           </button>                 
         </div>
       </div>  

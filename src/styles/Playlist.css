@@ -1,0 +1,7 @@
+.playlist {
+  color: #fff;
+  overflow: auto;
+  height: 100%;
+  /*background: #444;*/
+  z-index: -1;
+}

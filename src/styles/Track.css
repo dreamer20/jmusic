@@ -1,87 +1,73 @@
+.track {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #90bfb3;
+  padding: 4px;
+  height: 48px;
+}
+
+.track.active {
+  background: #3dccfb;
+}
+
+.track-image-wrapper {
+  flex: 0 0 auto;
+  height: 100%; 
+}
+
+.track-image {
+  height: 100%;
+  display: block;
+  max-width: 100%;
+}
+
 .track-play-btn-wrapper {
-  padding-left: 5px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .track-play-btn {
   padding: 5px;
   margin: 0;
-  width: 25px;
-  height: 25px;
-  background: #fff;
+  width: 30px;
+  height: 30px;
+  background: transparent;
   border: 2px solid #bbb;
+  color: #bbb;
   overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-play-btn.active {
+  color: #fff;
+  border-color: #fff;
 }
 
 .track-title {
   overflow: hidden;
-  width: 250px; 
+  flex: 1 1 auto;
+  padding: 0 5px; 
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: #6f6f6f;
+  font-size: 14px;
+}
+
+.track-name {
   font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.track-play-icon {
-  position: relative;
-  left: 2px;
-  border: 5px solid transparent;
-  border-left: 9px solid #bbb;
-  cursor: pointer;
-  width: 80px;
-  box-sizing: border-box;
+.track-artist-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.track-pause-icon {
-  height: 10px;
-  width: 10px;
-  position: relative;
-  top: 1px;
-  left: 1px;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.track-pause-icon:before,
-.track-pause-icon:after {
-  position: absolute;
-  top: 0;
-  display: block;
-  width: 3px;
-  height: 100%;
-  content: '';
-  background: #bbb;
-}
-
-.track-pause-icon:before {
-  left: 0;
-}
-
-.track-pause-icon:after {
-  right: 0;
-}
-
-.track {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #90bfb3;
-  padding: 4px;
-}
-
-.track.active .track-title {
-  color: #00c6c6;
-}
-
-.track.active .track-play-btn {
-  border-color: #00c6c6;
-}
-
-.track.active .track-play-icon {
-  border-left-color: #00c6c6;
-}
-
-.track.active .track-pause-icon:before,
-.track.active .track-pause-icon:after {
-  background: #00c6c6;
-}

@@ -37,10 +37,7 @@ export const nextTrack = () => (dispatch, getState) => {
     nextTrackIndex = 0;
   }
 
-  dispatch({
-    type: types.SELECT_TRACK,
-    id: playlist[nextTrackIndex]
-  });
+  dispatch(selectTrack(playlist[nextTrackIndex]));
 };
 
 export const prevTrack = () => (dispatch, getState) => {
@@ -56,16 +53,35 @@ export const prevTrack = () => (dispatch, getState) => {
     prevTrackIndex = playlist.length - 1;
   }
 
-  dispatch({
-    type: types.SELECT_TRACK,
-    id: playlist[prevTrackIndex]
-  });
+  dispatch(selectTrack(playlist[prevTrackIndex]));
 };
 
-// export const selectTrack = id => ({
-//   type: types.SELECT_TRACK,
-//   id
-// });
+export const setCurrentTime = time => ({
+  type: types.SET_CURRENT_TIME,
+  time
+});
+
+export const setVolume = volume => ({
+  type: types.SET_VOLUME,
+  volume
+});
+
+export const captureTimeSlider = volume => ({
+  type: types.CAPTURE_TIME_SLIDER,
+});
+
+export const releaseTimeSlider = volume => ({
+  type: types.RELEASE_TIME_SLIDER,
+});
+
+
+export const openFullPlayer = () => ({
+  type: types.OPEN_FULL_PLAYER
+});
+
+export const closeFullPlayer = () => ({
+  type: types.CLOSE_FULL_PLAYER
+});
 
 export const selectTrack = id => (dispatch, getState) => {
   const state = getState();
@@ -75,6 +91,7 @@ export const selectTrack = id => (dispatch, getState) => {
       type: types.ADD_TRACKS_TO_PLAYLIST,
       tracks: state.search.results
     });
+    dispatch(setCurrentTime(0));
     dispatch({
       type: types.SELECT_TRACK,
       id
